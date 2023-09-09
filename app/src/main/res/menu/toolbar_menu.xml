@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/not"
+        android:icon="@drawable/baseline_notifications_24"
+        android:title="Notification"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/updates"
+        android:title="Check For Updates"
+        android:icon="@drawable/refresh"
+        />
+    <item
+        android:id="@+id/support"
+        android:title="Support"
+        android:icon="@drawable/support"/>
+    <item
+        android:id="@+id/credit"
+        android:title="Credits"
+        android:icon="@drawable/info"
+        />
+</menu>

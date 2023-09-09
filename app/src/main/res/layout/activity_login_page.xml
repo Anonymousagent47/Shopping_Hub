@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".loginPage">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="50dp"
+        android:textColor="@color/blue"
+        android:gravity="center"
+        android:layout_above="@id/card"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nexa"
+        android:textStyle="bold"
+        android:id="@+id/txt"
+        />
+
+    <LinearLayout
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@android:color/transparent"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/logincard"
+            android:layout_width="0dp"
+            android:layout_height="340dp"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent">
+
+
+                <EditText
+                    android:id="@+id/usernameLog"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bor"
+                    android:drawableLeft="@drawable/baseline_person_24"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/nexa"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/blue"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/passLog"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/usernameLog"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bor"
+                    android:drawableLeft="@drawable/baseline_security_24"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/nexa"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/blue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/loginbtn"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/nexa"
+                    android:text="Forgot Password ?"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/loginbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/passLog"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="@color/blue"
+                    android:fontFamily="@font/nexa"
+                    android:text="Login"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="New User?"
+        android:fontFamily="@font/nexa"
+        android:textStyle="bold"
+        android:textSize="23dp"
+        />
+    <TextView
+        android:id="@+id/signuptxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        android:text="Sign Up"
+        android:textColor="@color/blue"
+        android:textSize="25dp"
+        android:fontFamily="@font/nexa"
+        android:textStyle="bold"/>
+</RelativeLayout>

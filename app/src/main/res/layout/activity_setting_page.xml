@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+    tools:context=".settingPage">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3DD1B"
+            app:title="Shopping Hub"
+            app:titleTextColor="@color/black"
+            app:titleMarginStart="30dp"
+            app:logo="@drawable/baseline_shopping_cart_24"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:menu="@menu/toolbar_menu"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottomappbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:backgroundTint="@android:color/transparent"
+                app:fabCradleMargin="10dp"
+                app:fabCradleRoundedCornerRadius="60dp">
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottom_navigation"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:labelVisibilityMode="labeled"
+                    app:itemIconTint="@color/black"
+                    app:itemTextColor="@color/black"
+                    app:itemTextAppearanceActive="@style/bottomfonts"
+                    app:itemTextAppearanceInactive="@style/bottomfonts"
+                    android:outlineAmbientShadowColor="@android:color/transparent"
+                    android:outlineSpotShadowColor="@android:color/transparent"
+                    app:menu="@menu/bottom_menu">
+
+                </com.google.android.material.bottomnavigation.BottomNavigationView>
+            </com.google.android.material.bottomappbar.BottomAppBar>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cartnn"
+                android:backgroundTint="@color/yellow"
+                android:backgroundTintMode="src_over"
+                app:layout_anchor="@id/bottomappbar"
+                app:maxImageSize="40dp" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="660dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_gravity="top"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/about"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="30dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/blue_border"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="About App"
+                    android:drawableLeft="@drawable/baseline_info_24"
+                    android:drawablePadding="75dp"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/nexa"
+                    android:textColor="@color/blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Version 1.10"
+                android:id="@+id/txt"
+                android:fontFamily="@font/nexa"
+                android:layout_below="@+id/about"
+                android:textSize="18dp"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt"
+                android:text="Copyright Under Prince Solanki Inc."
+                android:drawableLeft="@drawable/baseline_copyright_24"
+                android:drawablePadding="5dp"
+                android:layout_marginStart="75dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/nexa"
+                />
+        </RelativeLayout>
+</RelativeLayout>

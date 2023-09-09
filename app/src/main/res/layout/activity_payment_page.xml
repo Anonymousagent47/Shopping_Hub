@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+    tools:context=".paymentPage">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3DD1B"
+            app:title="Shopping Hub"
+            app:titleTextColor="@color/black"
+            app:titleMarginStart="30dp"
+            app:logo="@drawable/baseline_shopping_cart_24"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:menu="@menu/toolbar_menu"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottomappbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:backgroundTint="@android:color/transparent"
+                app:fabCradleMargin="10dp"
+                app:fabCradleRoundedCornerRadius="60dp">
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottom_navigation"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:labelVisibilityMode="labeled"
+                    app:itemIconTint="@color/black"
+                    app:itemTextColor="@color/black"
+                    app:itemTextAppearanceActive="@style/bottomfonts"
+                    app:itemTextAppearanceInactive="@style/bottomfonts"
+                    android:outlineAmbientShadowColor="@android:color/transparent"
+                    android:outlineSpotShadowColor="@android:color/transparent"
+                    app:menu="@menu/bottom_menu">
+
+                </com.google.android.material.bottomnavigation.BottomNavigationView>
+            </com.google.android.material.bottomappbar.BottomAppBar>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cartnn"
+                android:backgroundTint="@color/yellow"
+                android:backgroundTintMode="src_over"
+                app:layout_anchor="@id/bottomappbar"
+                app:maxImageSize="40dp" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="660dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_gravity="top"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/row_t"
+                android:layout_height="250dp"
+                android:layout_marginStart="20dp"
+                android:orientation="horizontal"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/paymentdetail"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="30dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blue_border"
+                        android:scaleType="fitXY"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Saved Method"
+                            android:textSize="25dp"
+                            android:layout_marginStart="20dp"
+                            android:textColor="@color/blue"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/nexa"
+                            />
+
+                        <ImageView
+                            android:id="@+id/testimg"
+                            android:layout_width="300dp"
+                            android:layout_height="200dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/newcard" />
+
+                        <TextView
+                            android:id="@+id/checkbalance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/testimg"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="-17dp"
+                            android:textColor="@color/blue"
+                            android:fontFamily="@font/nexa"
+                            android:layout_alignParentRight="true"
+                            android:text="Check Balance"
+                            android:drawableRight="@drawable/baseline_remove_red_eye_24"
+                            android:drawablePadding="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/row_t"
+                android:orientation="vertical"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/managepayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/new_border"
+                        android:scaleType="fitXY"
+                        />
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Manage Method"
+                        android:layout_marginTop="14dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nexa"
+                        android:textColor="@color/blue"
+                        android:drawableLeft="@drawable/baseline_credit_card_24"
+                        android:textSize="25dp"
+                        android:layout_marginStart="30dp"
+                        android:drawablePadding="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/addpayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/new_border"
+                        android:scaleType="fitXY"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Add Method"
+                        android:layout_marginTop="14dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nexa"
+                        android:textColor="@color/blue"
+                        android:drawableLeft="@drawable/baseline_edit_24"
+                        android:textSize="25dp"
+                        android:layout_marginStart="30dp"
+                        android:drawablePadding="65dp"
+                        />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/deletepayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/new_border"
+                        android:scaleType="fitXY"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Delete Method"
+                        android:layout_marginTop="14dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nexa"
+                        android:textColor="@color/blue"
+                        android:drawableLeft="@drawable/baseline_delete_24"
+                        android:textSize="25dp"
+                        android:layout_marginStart="30dp"
+                        android:drawablePadding="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
+</RelativeLayout>

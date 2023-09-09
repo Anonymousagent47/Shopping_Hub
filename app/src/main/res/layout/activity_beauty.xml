@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+    tools:context=".beauty">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3DD1B"
+            app:title="Shopping Hub"
+            app:subtitleTextAppearance="@font/nexa"
+            app:titleTextColor="@color/black"
+            app:titleMarginStart="30dp"
+            app:logo="@drawable/baseline_shopping_cart_24"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:menu="@menu/toolbar_menu"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottomappbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:backgroundTint="@android:color/transparent"
+                app:fabCradleMargin="10dp"
+                app:fabCradleRoundedCornerRadius="60dp">
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottom_navigation"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:labelVisibilityMode="labeled"
+                    app:itemIconTint="@color/black"
+                    app:itemTextColor="@color/black"
+                    app:itemTextAppearanceActive="@style/bottomfonts"
+                    app:itemTextAppearanceInactive="@style/bottomfonts"
+                    android:outlineAmbientShadowColor="@android:color/transparent"
+                    android:outlineSpotShadowColor="@android:color/transparent"
+                    app:menu="@menu/bottom_menu">
+                </com.google.android.material.bottomnavigation.BottomNavigationView>
+            </com.google.android.material.bottomappbar.BottomAppBar>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cartnn"
+                android:backgroundTint="@color/yellow"
+                android:backgroundTintMode="src_over"
+                app:layout_anchor="@id/bottomappbar"
+                app:maxImageSize="40dp" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="660dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_gravity="top"
+            >
+            <TextView
+                android:id="@+id/toptext"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="45dp"
+                android:fontFamily="@font/nexa"
+                android:text="Beauty"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/promo"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toptext"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Enhance Your Glow"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                android:fontFamily="@font/nexa"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/logoimg"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_toEndOf="@id/toptext"
+                android:src="@drawable/kit" />
+            <LinearLayout
+                android:id="@+id/row1"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_below="@id/logoimg"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/beauty1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="30dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blue_border"
+                        android:scaleType="fitXY"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="130dp"
+                            android:id="@+id/cream"
+                            android:src="@drawable/cream"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/n1"
+                            android:layout_below="@id/cream"
+                            android:text="Beauty Cream"
+                            android:fontFamily="@font/nexa"
+                            android:textColor="@color/blue"
+                            android:gravity="center"
+                            android:textSize="22dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/p1"
+                            android:layout_below="@id/n1"
+                            android:text="1,199/- Rs"
+                            android:fontFamily="@font/nexa"
+                            android:textColor="@color/blue"
+                            android:gravity="center"
+                            android:textSize="18dp"
+                            />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/beauty2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="30dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/blue_border"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="130dp"
+                            android:id="@+id/nailpolish"
+                            android:src="@drawable/np"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/n2"
+                            android:layout_below="@id/nailpolish"
+                            android:text="Nail Polish"
+                            android:fontFamily="@font/nexa"
+                            android:textColor="@color/blue"
+                            android:gravity="center"
+                            android:textSize="22dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/p2"
+                            android:layout_below="@id/n2"
+                            android:text="599/- Rs"
+                            android:fontFamily="@font/nexa"
+                            android:textColor="@color/blue"
+                            android:gravity="center"
+                            android:textSize="18dp"
+                            />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/row2"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_below="@id/row1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:id="@+id/beauty3"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="30dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blue_border"
+                        android:scaleType="fitXY"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="130dp"
+                            android:id="@+id/eyeshadow"
+                            android:src="@drawable/eyemakup"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/n3"
+                            android:layout_below="@id/eyeshadow"
+                            android:text="Eye Shadow"
+                            android:fontFamily="@font/nexa"
+                            android:textColor="@color/blue"
+                            android:gravity="center"
+                            android:textSize="22dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/p3"
+                            android:layout_below="@id/n3"
+                            android:text="2,499/- Rs"
+                            android:fontFamily="@font/nexa"
+                            android:textColor="@color/blue"
+                            android:gravity="center"
+                            android:textSize="18dp"
+                            />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:id="@+id/cloth4"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="30dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blue_border"
+                        android:scaleType="fitXY"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="130dp"
+                            android:id="@+id/lipstick"
+                            android:src="@drawable/lipstick"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/n4"
+                            android:layout_below="@id/lipstick"
+                            android:text="Lipstick"
+                            android:fontFamily="@font/nexa"
+                            android:gravity="center"
+                            android:textColor="@color/blue"
+                            android:textSize="22dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/p4"
+                            android:layout_below="@id/n4"
+                            android:text="799/- Rs"
+                            android:fontFamily="@font/nexa"
+                            android:textColor="@color/blue"
+                            android:gravity="center"
+                            android:textSize="18dp"
+                            />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
+</RelativeLayout>
