@@ -20,12 +20,12 @@ public class cartPage extends AppCompatActivity {
     FloatingActionButton fab;
     BottomNavigationView bottomNavigationView;
     Toolbar toolbar;
-    String username=getIntent().getStringExtra("username");
+    String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart_page);
-
+        username=getIntent().getStringExtra("username");
         fab = findViewById(R.id.fab);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

@@ -22,11 +22,13 @@ public class clothing extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     Toolbar toolbar;
     CardView cloth1,cloth2,cloth3,cloth4;
-    String username=getIntent().getStringExtra("username");
+    String uname;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clothing);
+        uname=getIntent().getStringExtra("username");
         fab = findViewById(R.id.fab);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -40,27 +42,27 @@ public class clothing extends AppCompatActivity {
                 int itemid = item.getItemId();
                 if (itemid == R.id.home_btm) {
                     Intent i=new Intent(getApplicationContext(), MainActivity.class);
-                    i.putExtra("username",username);
+                    i.putExtra("username",uname);
                     startActivity(i);
                     overridePendingTransition(0,0);
                 }
                 if (itemid == R.id.user_btm) {
                     Intent i=new Intent(getApplicationContext(), userPage.class);
-                    i.putExtra("username",username);
+                    i.putExtra("username",uname);
                     startActivity(i);
                     overridePendingTransition(0,0);
                     return true;
                 }
                 if (itemid == R.id.payment_btm) {
                     Intent i=new Intent(getApplicationContext(), paymentPage.class);
-                    i.putExtra("username",username);
+                    i.putExtra("username",uname);
                     startActivity(i);
                     overridePendingTransition(0,0);
                     return true;
                 }
                 if (itemid == R.id.setting_btn) {
                     Intent i=new Intent(getApplicationContext(), settingPage.class);
-                    i.putExtra("username",username);
+                    i.putExtra("username",uname);
                     startActivity(i);
                     overridePendingTransition(0,0);
                     return true;
@@ -72,7 +74,7 @@ public class clothing extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(), cartPage.class);
-                i.putExtra("username",username);
+                i.putExtra("username",uname);
                 startActivity(i);
                 overridePendingTransition(0,0);
             }
@@ -107,7 +109,7 @@ public class clothing extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Intent i=new Intent(getApplicationContext(), MainActivity.class);
-        i.putExtra("username",username);
+        i.putExtra("username",uname);
         startActivity(i);
         overridePendingTransition(0,0);
     }

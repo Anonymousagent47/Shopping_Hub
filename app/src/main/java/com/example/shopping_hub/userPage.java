@@ -25,11 +25,12 @@ public class userPage extends AppCompatActivity {
     TextView uname;
     Toolbar toolbar;
     CardView myacc,wishlist,security,logout;
-    String username=getIntent().getStringExtra("username");
+    String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_page);
+        username=getIntent().getStringExtra("username");
         fab = findViewById(R.id.fab);
         uname = findViewById(R.id.user);
         toolbar = findViewById(R.id.toolbar);

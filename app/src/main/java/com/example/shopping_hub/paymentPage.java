@@ -24,13 +24,13 @@ public class paymentPage extends AppCompatActivity {
     Toolbar toolbar;
     TextView checkbal;
     CardView managepayment,addpayment,deletepayment;
-    String username=getIntent().getStringExtra("username");
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_page);
-
+        username=getIntent().getStringExtra("username");
         fab = findViewById(R.id.fab);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

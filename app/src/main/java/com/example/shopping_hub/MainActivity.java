@@ -21,12 +21,12 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     Toolbar toolbar;
     CardView cloth,game,electro,beauty;
-    private long pressedTime;
+    long pressedTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        String uname=getIntent().getStringExtra("username");
         cloth=findViewById(R.id.clothingCard);
         game=findViewById(R.id.gamescard);
         beauty=findViewById(R.id.beautycard);
@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitleTextAppearance(this, R.style.topfont);
-        String uname=getIntent().getStringExtra("username");
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.home_btm);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

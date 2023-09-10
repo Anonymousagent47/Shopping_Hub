@@ -43,7 +43,7 @@ public class loginPage extends AppCompatActivity {
                     if (uname.getText().toString().equals(username) && passwd.getText().toString().equals(password)) {
                         Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                        i.putExtra("username",username);
+                        i.putExtra("username",uname.getText().toString());
                         startActivity(i);
                     }else {
                         Toast.makeText(loginPage.this, "You Have "+counter+" Login Attempts Left", Toast.LENGTH_SHORT).show();

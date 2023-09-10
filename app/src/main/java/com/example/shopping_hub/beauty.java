@@ -19,11 +19,12 @@ public class beauty extends AppCompatActivity {
     FloatingActionButton fab;
     BottomNavigationView bottomNavigationView;
     Toolbar toolbar;
-    String unm=getIntent().getStringExtra("username");
+    String unm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beauty);
+        unm=getIntent().getStringExtra("username");
         fab = findViewById(R.id.fab);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
