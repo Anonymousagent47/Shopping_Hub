@@ -21,12 +21,13 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     Toolbar toolbar;
     CardView cloth,game,electro,beauty;
+    String username;
     long pressedTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String uname=getIntent().getStringExtra("username");
+        username=getIntent().getStringExtra("username");
         cloth=findViewById(R.id.clothingCard);
         game=findViewById(R.id.gamescard);
         beauty=findViewById(R.id.beautycard);
@@ -47,21 +48,21 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (itemid == R.id.user_btm) {
                     Intent i=new Intent(getApplicationContext(),userPage.class);
-                    i.putExtra("username",uname);
+                    i.putExtra("username",username);
                     startActivity(i);
                     overridePendingTransition(0,0);
                     return true;
                 }
                 if (itemid == R.id.payment_btm) {
                     Intent i=new Intent(getApplicationContext(),paymentPage.class);
-                    i.putExtra("username",uname);
+                    i.putExtra("username",username);
                     startActivity(i);
                     overridePendingTransition(0,0);
                     return true;
                 }
                 if (itemid == R.id.setting_btn) {
                     Intent i=new Intent(getApplicationContext(),settingPage.class);
-                    i.putExtra("username",uname);
+                    i.putExtra("username",username);
                     startActivity(i);
                     overridePendingTransition(0,0);
                     return true;
@@ -73,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),cartPage.class);
-                i.putExtra("username",uname);
+                i.putExtra("username",username);
                 startActivity(i);
                 overridePendingTransition(0,0);
             }
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(), clothing.class);
-                i.putExtra("username",uname);
+                i.putExtra("username",username);
                 startActivity(i);
                 overridePendingTransition(0,0);
             }
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(), games.class);
-                i.putExtra("username",uname);
+                i.putExtra("username",username);
                 startActivity(i);
                 overridePendingTransition(0,0);
             }
@@ -100,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(), beauty.class);
-                i.putExtra("username",uname);
+                i.putExtra("username",username);
                 startActivity(i);
                 overridePendingTransition(0,0);
             }
@@ -109,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(), electronics.class);
-                i.putExtra("username",uname);
+                i.putExtra("username",username);
                 startActivity(i);
                 overridePendingTransition(0,0);
             }

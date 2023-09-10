@@ -19,12 +19,12 @@ public class beauty extends AppCompatActivity {
     FloatingActionButton fab;
     BottomNavigationView bottomNavigationView;
     Toolbar toolbar;
-    String unm;
+    String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beauty);
-        unm=getIntent().getStringExtra("username");
+        username=getIntent().getStringExtra("username");
         fab = findViewById(R.id.fab);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -38,28 +38,28 @@ public class beauty extends AppCompatActivity {
                 int itemid = item.getItemId();
                 if (itemid == R.id.home_btm) {
                     Intent i=new Intent(getApplicationContext(), MainActivity.class);
-                    i.putExtra("username",unm);
+                    i.putExtra("username",username);
                     startActivity(i);
                     overridePendingTransition(0,0);
                     return true;
                 }
                 if (itemid == R.id.user_btm) {
                     Intent i=new Intent(getApplicationContext(), userPage.class);
-                    i.putExtra("username",unm);
+                    i.putExtra("username",username);
                     startActivity(i);
                     overridePendingTransition(0,0);
                     return true;
                 }
                 if (itemid == R.id.payment_btm) {
                     Intent i=new Intent(getApplicationContext(), paymentPage.class);
-                    i.putExtra("username",unm);
+                    i.putExtra("username",username);
                     startActivity(i);
                     overridePendingTransition(0,0);
                     return true;
                 }
                 if (itemid == R.id.setting_btn) {
                     Intent i=new Intent(getApplicationContext(), settingPage.class);
-                    i.putExtra("username",unm);
+                    i.putExtra("username",username);
                     startActivity(i);
                     overridePendingTransition(0,0);
                     return true;
@@ -71,7 +71,7 @@ public class beauty extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(), cartPage.class);
-                i.putExtra("username",unm);
+                i.putExtra("username",username);
                 startActivity(i);
                 overridePendingTransition(0,0);
             }
@@ -105,7 +105,7 @@ public class beauty extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Intent i=new Intent(getApplicationContext(), MainActivity.class);
-        i.putExtra("username",unm);
+        i.putExtra("username",username);
         startActivity(i);
         overridePendingTransition(0,0);
     }
