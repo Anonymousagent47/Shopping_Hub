@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +31,9 @@ public class userPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_page);
+
+        Window window=this.getWindow();
+        window.setStatusBarColor(getResources().getColor(R.color.blue));
         username=getIntent().getStringExtra("username");
         fab = findViewById(R.id.fab);
         uname = findViewById(R.id.user);

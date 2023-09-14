@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,6 +16,9 @@ public class signupPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup_page);
+
+        Window window=this.getWindow();
+        window.setStatusBarColor(getResources().getColor(R.color.blue));
         EditText name=findViewById(R.id.name);
         EditText email=findViewById(R.id.mail);
         EditText pass=findViewById(R.id.pass);

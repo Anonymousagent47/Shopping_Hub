@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -26,6 +27,9 @@ public class settingPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_page);
+
+        Window window=this.getWindow();
+        window.setStatusBarColor(getResources().getColor(R.color.blue));
         username=getIntent().getStringExtra("username");
         fab = findViewById(R.id.fab);
         toolbar = findViewById(R.id.toolbar);
