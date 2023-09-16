@@ -101,7 +101,9 @@ public class clothing extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"No Notifications",Toast.LENGTH_SHORT).show();
         }
         if(id==R.id.updates){
-            Toast.makeText(getApplicationContext(),"App is Up-To-Date",Toast.LENGTH_SHORT).show();
+            Intent i=new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse("https://youtube.com/shorts/SXHMnicI6Pg?si=ltLwn9G0UGnxHjvO"));
+            startActivity(i);
         }
         if(id==R.id.credit){
             Toast.makeText(getApplicationContext(),"@Created By Prince Solanki",Toast.LENGTH_SHORT).show();
