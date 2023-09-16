@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -101,7 +102,9 @@ public class cartPage extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"@Created By Prince Solanki",Toast.LENGTH_SHORT).show();
         }
         if(id==R.id.support){
-            Toast.makeText(getApplicationContext(),"No Comments",Toast.LENGTH_SHORT).show();
+            Intent i=new Intent(Intent.ACTION_DIAL);
+            i.setData(Uri.parse("tel:8780705662"));
+            startActivity(i);
         }
         return true;
     }
